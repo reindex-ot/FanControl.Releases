@@ -2,7 +2,7 @@
   <a href="https://www.getfancontrol.com"><img src="Images/logo.gif" width="36"/></a><span>&nbsp;</span><span>Fan Control</span>
 </h1>
 
-<p align="center">A focused and highly customizable fan controlling software for Windows.<br><i>Sources for this software are closed.</i></p>
+<p align="center">Windows 向けの高度なカスタマイズと機能特化型なファンコントロールソフトウェアです。<br><i>本ソフトウェアのソースコードは非公開です。</i></p>
 
 <p align="center">
   <a href="/FanControl.zip?raw=true"><img src="https://img.shields.io/badge/Download-FanControl-green.svg?style=flat&logo=download" alt="Download"/></a>
@@ -15,7 +15,7 @@
 
 ---
 
-## Featured On
+## 掲載メディア
 
 **JayzTwoCents** — Everyone NEEDS this FREE piece of software... You will thank me!
 
@@ -23,23 +23,23 @@
   <img alt="JayzTwoCents - Everyone NEEDS this FREE piece of software... You will thank me!" src="https://i.ytimg.com/vi/uDPKVKBMQU8/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpjcuKgjSlSO8bZt8bcG4eKoRB4Q" width="350"/>
 </a>
 
-## Table of Contents
+## 目次
 
-- [Announcement](#announcement)
-- [Main Features](#main-features)
-- [Installation & Uninstall](#installation--uninstall)
-- [Plugins](#plugins)
-- [Issues & Hardware Compatibility](#issues-and-hardware-compatibility)
-- [FAQ](#faq)
-- [Libraries Used](#libraries-used)
+- [お知らせ](#announcement)
+- [主な機能](#main-features)
+- [インストールとアンインストール](#installation--uninstall)
+- [プラグイン](#plugins)
+- [問題とハードウェアの互換性](#issues-and-hardware-compatibility)
+- [よくある質問](#faq)
+- [使用しているライブラリ](#libraries-used)
 - [GitHub Sponsors](#github-sponsors)
 
-## Announcement
+## お知らせ
 
-- __NEW__: Fan Control can now be started on boot as a service, without any user session.
-- __NEW__: Calibration avoid points: set avoid points if you want your fans to never run in at a specific % that may rattle or emit an annoying noise. 
+- __NEW__: Fan Control をユーザーセッションなしで、サービスとして起動を行えるようにしました。
+- __NEW__: キャリブレーションの回避ポイント: 特定の回転数 (%) でガタつきや不快な異音が発生する場合、その数値を回避ポイントとして設定してください。
 
-  <img alt="JayzTwoCents - Everyone NEEDS this FREE piece of software... You will thank me!" src="Images/Avoid.png" width="350"/>
+  <img alt="JayzTwoCents - Everyone NEEDS this FREE piece of software... You will thank me!" src="/Images/Avoid.png" width="350"/>
 - FanControl, its installer and the updater now have a signed executable, which should help with AVs false flagging.
 - [V238](https://github.com/Rem0o/FanControl.Releases/releases/tag/V238) and above now ships with a [PawnIO](https://pawnio.eu/) build of [LHM](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor). This fixes the anti-virus problems encountered with WinRing0, as it is no longer shipped with FanControl. Note that as of 09/04/2025, WinRing0 (FanControl.sys) used in V237 and below is flagged as [Trojan:Win32/Vigorf.A](https://github.com/Rem0o/FanControl.Releases/issues/3410#issuecomment-3254057373) by Windows Defender, causing sensors to not be detected — updating to V238 or later is the recommended fix.
 - The FaceIT issue was fixed with the [2.1.0 PawnIO version](https://github.com/namazso/PawnIO.Setup/releases/tag/2.1.0).
