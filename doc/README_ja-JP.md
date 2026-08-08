@@ -25,13 +25,13 @@
 
 ## 目次
 
-- [お知らせ](#announcement)
-- [主な機能](#main-features)
-- [インストールとアンインストール](#installation--uninstall)
-- [プラグイン](#plugins)
-- [問題とハードウェアの互換性](#issues-and-hardware-compatibility)
-- [よくある質問](#faq)
-- [使用しているライブラリ](#libraries-used)
+- [お知らせ](#お知らせ)
+- [主な機能](#主な機能)
+- [インストールとアンインストール](#インストールとアンインストール)
+- [プラグイン](#プラグイン)
+- [問題とハードウェアの互換性](#問題とハードウェアの互換性)
+- [よくある質問](#よくある質問)
+- [使用しているライブラリ](#使用しているライブラリ)
 - [GitHub Sponsors](#github-sponsors)
 
 ## お知らせ
@@ -40,33 +40,33 @@
 - __NEW__: キャリブレーションの回避ポイント: 特定の回転数 (%) でガタつきや不快な異音が発生する場合、その数値を回避ポイントとして設定してください。
 
   <img alt="JayzTwoCents - Everyone NEEDS this FREE piece of software... You will thank me!" src="/Images/Avoid.png" width="350"/>
-- FanControl, its installer and the updater now have a signed executable, which should help with AVs false flagging.
-- [V238](https://github.com/Rem0o/FanControl.Releases/releases/tag/V238) and above now ships with a [PawnIO](https://pawnio.eu/) build of [LHM](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor). This fixes the anti-virus problems encountered with WinRing0, as it is no longer shipped with FanControl. Note that as of 09/04/2025, WinRing0 (FanControl.sys) used in V237 and below is flagged as [Trojan:Win32/Vigorf.A](https://github.com/Rem0o/FanControl.Releases/issues/3410#issuecomment-3254057373) by Windows Defender, causing sensors to not be detected — updating to V238 or later is the recommended fix.
-- The FaceIT issue was fixed with the [2.1.0 PawnIO version](https://github.com/namazso/PawnIO.Setup/releases/tag/2.1.0).
+- FanControl、インストーラーおよび更新が署名付きの実行ファイルになりました。これによってウイルス対策ソフトによる誤検知が軽減するはずです。
+- [V238](https://github.com/Rem0o/FanControl.Releases/releases/tag/V238) 以降から [LHM](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) の [PawnIO](https://pawnio.eu/) が同梱されるようになりました。WinRing0 を FanControl に同梱することをやめたことでウイルス対策ソフトでの問題が解消されます。なお、2025 年 9 月 4 日時点で、V237 以前に使用されていた、WinRing0 (FanControl.sys) は Windows Defender で [Trojan:Win32/Vigorf.A](https://github.com/Rem0o/FanControl.Releases/issues/3410#issuecomment-3254057373) として検知されるようになっています。
+- FaceIT の問題は、[PawnIO バージョン 2.1.0](https://github.com/namazso/PawnIO.Setup/releases/tag/2.1.0) で修正されています。
 
-## Main Features
+## 主な機能
 
-- Guided **setup** process on first launch
-- Save, edit and load multiple **profiles**
-- Change the **theme** and **color** of the application
-- Multiple temperature **sources** (CPU, GPU, motherboard, hard drives...)
-- Multiple fan curve **[functions](https://getfancontrol.com/docs)**, including a custom **[graph](#graph-fan-curve-editor)**
+- 初回起動時のガイド付き**セットアップ**プロセス
+- 複数の**プロファイル**を保存、編集、読み込み
+- アプリの**テーマ**と**カラー**を変更
+- 複数の温度ソース (CPU、GPU、マザーボード、ハードドライブなど...)
+- **[カスタムグラフ](#graph-fan-curve-editor)**を含む、複数の**[ファンカーブ機能](https://getfancontrol.com/docs)**
 - **Mix** fan curves or sensors together (max, min, average)
 - Low resource usage
 - Advanced tuning with steps, start %, stop %, response time and hysteresis
 
 Full documentation is available at **[getfancontrol.com/docs](https://getfancontrol.com/docs/)**.
 
-## Installation & Uninstall
+## インストールとアンインストール
 
-### Install
+### インストール
 
 1. [Download the latest archive](/FanControl.zip?raw=true) *or* [an installer from the release page](https://github.com/Rem0o/FanControl.Releases/releases).
 2. Extract to the desired installation folder *or* run the installer.
 3. Start `FanControl.exe`.
 
 <details>
-<summary>Other install methods (Scoop / Winget / Chocolatey)</summary>
+<summary>その他のインストール方法 (Scoop / Winget / Chocolatey)</summary>
 
 **[Scoop](https://scoop.sh/#/apps?s=2&d=1&o=true&p=1&q=fan+control)**
 ```
@@ -86,7 +86,7 @@ choco install fancontrol
 
 </details>
 
-### Uninstall
+### アンインストール
 
 **Portable** — You can leave the files there for future use, or delete them.
 
@@ -94,47 +94,47 @@ choco install fancontrol
 
 **Installer** — Uninstall like any other Windows program through the Programs list.
 
-## Plugins
+## プラグイン
 
 The plugin system lets you inject any type of sensor into FanControl. See the [Plugins wiki](https://github.com/Rem0o/FanControl.Releases/wiki/Plugins) for details.
 
-![Plugin Installation](Images/PluginInstallation.png)
+![Plugin Installation](/Images/PluginInstallation.png)
 
-### From Rem0o
+### Rem0o の開発
 
-| Plugin | Description |
+| プラグイン | 説明 |
 |--------|-------------|
-| [FanControl.IntelCtlLibrary](https://github.com/Rem0o/FanControl.IntelCtlLibrary) | Intel ARC GPU support |
-| [FanControl.HWInfo](https://github.com/Rem0o/FanControl.HWInfo) | Import HWInfo sensor data |
-| [FanControl.DellPlugin](https://github.com/Rem0o/FanControl.DellPlugin) | Dell laptops and some towers |
+| [FanControl.IntelCtlLibrary](https://github.com/Rem0o/FanControl.IntelCtlLibrary) | Intel ARC GPU の対応を追加 |
+| [FanControl.HWInfo](https://github.com/Rem0o/FanControl.HWInfo) | HWInfo センサーデータをインポート |
+| [FanControl.DellPlugin](https://github.com/Rem0o/FanControl.DellPlugin) | Dell 製 ノートとタワーの対応を追加 |
 
-### From the Community
+### コミュニティの開発
 
-> *Notify me if I'm missing some.*
+> *漏れがあった場合はお知らせください。*
 
-| Plugin | Description |
+| プラグイン | 説明 |
 |--------|-------------|
-| [FanControl.Thermaltake](https://github.com/AMoo-Miki/FanControlThermaltake) | Thermaltake devices (updated fork of [fu-raz/FanControlThermaltake](https://github.com/fu-raz/FanControlThermaltake)) |
-| [FanControl.LiquidCtl](https://github.com/antoine-bouteiller/FanControl.LiquidCtl) | AIO devices via [liquidctl](https://github.com/liquidctl/liquidctl); updated fork with multi-fan controller support |
-| [FanControl.AsusWMI](https://github.com/Mourdraug/FanControl.AsusWMI) | ASUS motherboards via WMI |
+| [FanControl.Thermaltake](https://github.com/AMoo-Miki/FanControlThermaltake) | Thermaltake 製デバイス ([fu-raz/FanControlThermaltake](https://github.com/fu-raz/FanControlThermaltake) の更新版フォーク) |
+| [FanControl.LiquidCtl](https://github.com/antoine-bouteiller/FanControl.LiquidCtl) | [liquidctl](https://github.com/liquidctl/liquidctl) 経由の AIO デバイス、マルチファンコントローラーに対応した更新済みフォーク |
+| [FanControl.AsusWMI](https://github.com/Mourdraug/FanControl.AsusWMI) | WMI 経由の ASUS マザーボード |
 | [FanControl.AquacomputerDevices](https://github.com/medevil84/FanControl.AquacomputerDevices) | Aquacomputer HighFlowNext, Quadro and Octo |
 | [FanControl.AquacomputerQuadro](https://github.com/FoPzl/FanControl.AquacomputerQuadro) | Aquacomputer Quadro |
-| [FanControl.GPU-Z](https://github.com/vision57/FanControl.GPU-Z) | GPU-Z sensor data |
+| [FanControl.GPU-Z](https://github.com/vision57/FanControl.GPU-Z) | GPU-Z センサーデータ |
 | [FanControl.CorsairLink](https://github.com/EvanMulawski/FanControl.CorsairLink) | Corsair Commander controllers and Hydro liquid coolers |
-| [FanControl.Razer](https://github.com/EvanMulawski/FanControl.Razer) | Razer devices |
+| [FanControl.Razer](https://github.com/EvanMulawski/FanControl.Razer) | Razer 製デバイス |
 | [FanControl.HomeAssistant](https://github.com/hgross/FanControl.HomeAssistant) | [HomeAssistant](https://github.com/home-assistant) temperature sensors (Philips Hue, HomeMatic, HomeKit, etc.) |
 | [FanControl.NzxtKraken](https://github.com/brokenmass/Fancontrol.NzxtKraken) | NZXT Kraken AIOs not yet in LHM (e.g. Kraken X2, X3 new PID) |
-| [FanControl.LianLi](https://github.com/lewisgibson/FanControl.LianLi) | LianLi [L-Connect 3](https://lian-li.com/l-connect3/) fan controllers |
-| [FanControl.NvThermalSensors](https://github.com/TimSirmovics/FanControl.NvThermalSensors) | Nvidia GPU Hot Spot and Memory Junction temperatures |
-| [FanControl.OpenFan](https://github.com/SasaKaranovic/FanControl.OpenFan) | [OpenFAN](https://github.com/SasaKaranovic/OpenFanController) controller |
-| [FanControl.AIDA64](https://github.com/Brian-E-Taylor/FanControl.AIDA64) | AIDA64 sensor readings |
+| [FanControl.LianLi](https://github.com/lewisgibson/FanControl.LianLi) | LianLi [L-Connect 3](https://lian-li.com/l-connect3/) ファンコントローラー |
+| [FanControl.NvThermalSensors](https://github.com/TimSirmovics/FanControl.NvThermalSensors) | Nvidia GPU のホットスポットおよびメモリジャンクションの温度 |
+| [FanControl.OpenFan](https://github.com/SasaKaranovic/FanControl.OpenFan) | [OpenFAN](https://github.com/SasaKaranovic/OpenFanController) コントローラー |
+| [FanControl.AIDA64](https://github.com/Brian-E-Taylor/FanControl.AIDA64) | AIDA64 センサーの読み取り |
 | [FanControl.RazerCoolingPadPlugin](https://github.com/Benson5650/FanControl.RazerCoolingPadPlugin) | Razer Laptop Cooling Pad |
-| [FanControl.GPDPlugin](https://github.com/chenx-dust/FanControl.GPDPlugin) | GPD devices |
+| [FanControl.GPDPlugin](https://github.com/chenx-dust/FanControl.GPDPlugin) | GPD 製デバイス |
 | [FanControl.LenovoPlugin](https://github.com/jiarandiana0307/FanControl.LenovoPlugin) | Lenovo laptops with `Lenovo ACPI-Compliant Virtual Power Controller` |
-| [FanControl.GigabyteWaterforce](https://github.com/brenoperucchi/FanControl.GigabyteWaterforce) | GIGABYTE AORUS WATERFORCE X AIO coolers — X240, X280, X360 |
+| [FanControl.GigabyteWaterforce](https://github.com/brenoperucchi/FanControl.GigabyteWaterforce) | GIGABYTE AORUS WATERFORCE X AIO クーラー — X240、X280、X360 |
 | [FanControl.AcerPredatorPH315](https://github.com/phaax/FanControl.AcerPredatorPH315) | Native fan control for the Acer Predator Helios 300 (PH315-53) |
 
-## Issues and Hardware Compatibility
+## 問題とハードウェアの互換性
 
 Fan Control is primarily a UI layer on top of existing hardware libraries. Any hardware compatibility issue is largely dependent on the upstream project:
 
@@ -144,7 +144,7 @@ Please **only open issues on this repository** for the software itself: UI bugs,
 
 If you have a hardware compatibility request and can provide a **working** code sample usable in .NET (e.g. via a [Plugin](https://github.com/Rem0o/FanControl.Releases/wiki/Plugins)), feel free to submit that.
 
-## FAQ
+## よくある質問
 
 **Q: What BIOS settings work best with FanControl?**
 > Avoid any "smart" fan control from your BIOS. Setting a fixed default speed (e.g. 50%) works great for most people. Also check whether your BIOS uses PWM or DC mode — one may work better depending on your setup.
@@ -167,15 +167,15 @@ If you have a hardware compatibility request and can provide a **working** code 
 **Q: What OS does it run on?**
 > Windows 10 and Windows 11.
 
-## Libraries Used
+## 使用しているライブラリ
 
-| Library | Purpose |
+| ライブラリ | 目的 |
 |---------|---------|
-| [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) | Main sensor source |
-| [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) | UI framework |
-| [NvAPIWrapper](https://github.com/falahati/NvAPIWrapper) | Nvidia GPU fan control and sensor reading |
-| [ADLXWrapper](https://github.com/Rem0o/ADLXWrapper) | AMD GPU fan control and sensor reading |
-| [gong-wpf-dragdrop](https://github.com/punker76/gong-wpf-dragdrop) | Drag and drop interactions |
+| [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor) | メインセンサーソース |
+| [MaterialDesignInXamlToolkit](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit) | UI フレームワーク |
+| [NvAPIWrapper](https://github.com/falahati/NvAPIWrapper) | Nvidia GPU ファンコントロールとセンサーの読み取り |
+| [ADLXWrapper](https://github.com/Rem0o/ADLXWrapper) | AMD GPU ファンコントロールとセンサーの読み取り |
+| [gong-wpf-dragdrop](https://github.com/punker76/gong-wpf-dragdrop) | 項目のドラッグアンドドロップ |
 
 ## GitHub Sponsors
 
