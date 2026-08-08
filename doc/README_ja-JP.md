@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://www.getfancontrol.com"><img src="Images/logo.gif" width="36"/></a><span>&nbsp;</span><span>Fan Control</span>
+  <a href="https://www.getfancontrol.com"><img src="/Images/logo.gif" width="36"/></a><span>&nbsp;</span><span>Fan Control</span>
 </h1>
 
 <p align="center">Windows 向けの高度なカスタマイズと機能特化型なファンコントロールソフトウェアです。<br><i>本ソフトウェアのソースコードは非公開です。</i></p>
