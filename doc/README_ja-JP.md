@@ -11,7 +11,7 @@
 
 </p>
 
-![Fan Control](Images/MainUI.png)
+![Fan Control](/Images/MainUI.png)
 
 ---
 
